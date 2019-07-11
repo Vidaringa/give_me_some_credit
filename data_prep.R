@@ -152,6 +152,11 @@ test_data_knn <- bake(trained_rec_knn, new_data = df_test)
 
 # bagging gögn
 train_data_bag <- bake(trained_rec_bag, new_data = df)
-train_data_bag <- bake(trained_rec_bag, new_data = df_test)
+test_data_bag <- bake(trained_rec_bag, new_data = df_test)
 
 
+# Vista gögnin
+write_csv(train_data_knn, "train_knn.csv")
+write_csv(test_data_knn, "test_knn.csv")
+write_csv(train_data_bag, "train_bag.csv")
+write_csv(test_data_bag, "test_bag.csv")
